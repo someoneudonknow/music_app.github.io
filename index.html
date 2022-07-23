@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-6.1.1-web/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/themify-icons/themify-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./assets/icons/music.png" type="png/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/breakPoint.css">
+    <title>Music player</title>
+  </head>
+  <body>
+    <div class="player" tabindex="0">
+      <!-- Dashboard -->
+      <div class="dashboard">
+        <!-- Header -->
+        <header>
+          <h4>Now playing:</h4>
+          <h2>String 57th & 9th</h2>
+        </header>
+        <!-- CD -->
+        <div class="cd">
+          <div class="cd-thumb"></div>
+        </div>
+
+        <!-- Control -->
+        <div class="control">
+          <div class="btn btn-like">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <div class="btn btn-repeat">
+            <i class="fas fa-redo"></i>
+          </div>
+          <div class="btn btn-prev">
+            <i class="fas fa-step-backward"></i>
+          </div>
+          <div class="btn btn-toggle-play">
+            <i class="fas fa-pause icon-pause"></i>
+            <i class="fas fa-play icon-play"></i>
+          </div>
+          <div class="btn btn-next">
+            <i class="fas fa-step-forward"></i>
+          </div>
+          <div class="btn btn-random">
+            <i class="fas fa-random"></i>
+          </div>
+          <div class="btn btn-volume">
+            <i class="fa-solid ti-volume"></i>
+            <div class="input-wrapper">
+              <p id="volume-percent">0</p>
+              <input
+              id="volume"
+              class="volume"
+              type="range"
+              value="0"
+              step="1"
+              min="0"
+              max="100"
+            />
+            </div>
+          </div>
+        </div>
+
+        <input
+          id="progress"
+          class="progress"
+          type="range"
+          value="0"
+          step="1"
+          min="0"
+          max="100"
+        />
+        <audio id="audio" src="">your browser doesn't support audio format</audio>
+      </div>
+
+      <!-- Playlist -->
+      <div class="playlist"> 
+      </div>
+    </div>
+
+    <div class="edit-song">
+      <!-- animation-play -->
+      <div class="edit-song-header">Playlist Editer</div>
+
+      <div class="edit-form create-form">
+        <div class="form-wrapper">
+          <h3 class="form-header">Create song</h3>
+          
+          <div class="input-wrapper">
+
+          <div class="input-section">
+            <label for="song-name">Song name</label>
+            <input type="text" name="form-inputs" id="song-name" placeholder="Enter the song name" class="song-name">
+            <div class="line"></div>
+          </div>
+
+          <div class="input-section">
+            <label for="singer-name">Singer name</label>
+            <input type="text" name="form-inputs" placeholder="Enter the singer name" class="singer-name" id="singer-name">
+            <div class="line"></div>
+          </div>
+
+            <div class="input-section">
+              <label for="thumb-link">CD thumb link</label>
+              <input type="text" name="form-inputs" placeholder="Paste the link here" class="thumb-link" id="thumb-link">
+              <div class="line"></div>
+            </div>
+
+            <div class="input-section file-section">
+              <label for="music-file">Audio file</label>
+              <input type="file" name="form-inputs" id="music-file" accept="audio/mpeg" class="music-file">
+            </div>
+          </div>
+          
+          <button class="btn form-btn create-btn">Create song</button>
+          <button class="btn form-btn save-btn">Save</button>
+        </div>
+      </div>
+      <div class="animation">
+        <div class="loading"></div>
+      </div>
+    </div>
+    <script src="./JS/main.js" type="module"></script>
+  </body>
+</html>
